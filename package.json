@@ -1,6 +1,6 @@
 {
   "name": "express-duplicate-request",
-  "version": "0.1.21",
+  "version": "1.0.0",
   "description": "Express middleware to avoid duplicates requests made by client",
   "keywords": [
     "express",
@@ -9,8 +9,6 @@
     "slowDown",
     "duplicate-request"
   ],
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
   "scripts": {
     "test": "jest tests/",
     "test:coverage": "jest tests/ --coverage && cd coverage/lcov-report && live-server",
@@ -21,19 +19,16 @@
     "docs": "typedoc src/",
     "prepublishOnly": "tsc"
   },
-  "files": [
-    "build/"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/romch007/duplicate-requests.git"
+    "url": "git+https://github.com/bombkiml/express-duplicate-request.git"
   },
-  "author": "Romain Chardiny <romain.chardiny@gmail.com>",
+  "author": "bombkiml",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/romch007/duplicate-requests/issues"
+    "url": "https://github.com/bombkiml/express-duplicate-request/issues"
   },
-  "homepage": "https://gitlab.com/romch007/duplicate-requests#readme",
+  "homepage": "https://github.com/bombkiml/express-duplicate-request#readme",
   "devDependencies": {
     "@types/express": "^4.17.7",
     "@types/jest": "^26.0.4",
