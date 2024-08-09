@@ -36,7 +36,7 @@ export class Store {
    * @param options - Store options
    */
   constructor(options?: StoreOptions) {
-    this.expiration = options?.expiration ?? 1.08e7;
+    this.expiration = options?.expiration ?? 300;
     this.keyvInstance = new Keyv(options?.connectionUri ?? "", {
       serialize: JSON.stringify,
       deserialize: JSON.parse,
