@@ -38,7 +38,7 @@ export type MiddlewareOptions = {
  */
 function slowDown(options: MiddlewareOptions) {
   let store = new Store({
-    expiration: options?.expiration ?? 300,
+    expiration: options?.expiration ?? 0,
     prefix: options?.prefix
   });
 
