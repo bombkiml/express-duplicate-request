@@ -36,7 +36,7 @@ export type MiddlewareOptions = {
  * @param options - Middleware options
  * @return The middleware function used by express
  */
-function slowDown(options: MiddlewareOptions) {
+function duplicateRequest(options: MiddlewareOptions) {
   let store = new Store({
     expiration: options?.expiration ?? 0,
     prefix: options?.prefix
@@ -76,4 +76,4 @@ function slowDown(options: MiddlewareOptions) {
   return RequestMiddleware;
 }
 
-export { slowDown };
+export { duplicateRequest };

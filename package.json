@@ -1,13 +1,13 @@
 {
   "name": "express-duplicate-request",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Express middleware to avoid duplicates requests made by client",
   "keywords": [
+    "duplicate-request",
     "express",
     "middleware",
     "requests",
-    "slowDown",
-    "duplicate-request"
+    "slowDown"
   ],
   "scripts": {
     "test": "jest tests/",
