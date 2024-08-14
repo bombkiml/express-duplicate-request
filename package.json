@@ -1,6 +1,6 @@
 {
   "name": "express-duplicate-request",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Express middleware to avoid duplicates requests made by client",
   "keywords": [
     "duplicate-request",
