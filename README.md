@@ -22,12 +22,12 @@ const { duplicateRequest } = require("express-duplicate-request");
 const express = require("express");
 const app = express();
 
-const mySlow = duplicateRequest({
-  expiration: 500, // One Request for Slow down 5 milliseconds each IP requests per `window`
+const myDup = duplicateRequest({
+  expiration: 500, // Can't duplicate request for 5 milliseconds each IP requests per `window`
 });
 
 // Apply the duplicate request middleware to all requests.
-app.use(mySlow);
+app.use(myDup);
 
 app.get("/", (req, res) => res.end("Hey!"));
 
@@ -61,13 +61,13 @@ app.listen(9000, () => console.log("Listening!"));
 ### Specific your Endpoint
 ```javascript
 // Declare Specific 1
-const specificSlow1 = duplicateRequest({
-  expiration: 500, // Slow down 5 milliseconds
+const specificDup1 = duplicateRequest({
+  expiration: 500, // Can't duplicate request for 5 milliseconds
 });
 
 // Declare Specific 1
-const specificSlow2 = duplicateRequest({
-  expiration: 1000, // Slow down 1 seconds
+const specificDup2 = duplicateRequest({
+  expiration: 1000, // Can't duplicate request for 1 seconds
 });
 
 app.get("/", specificSlow1, (req, res) => res.end("Hey! 5 milliseconds"));
