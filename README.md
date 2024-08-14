@@ -15,18 +15,18 @@ $ yarn add express-duplicate-request
 ## Usage
 
 ```javascript
-import { slowDown } from "express-duplicate-request";
+import { duplicateRequest } from "express-duplicate-request";
 // OR
-const { slowDown } = require("express-duplicate-request");
+const { duplicateRequest } = require("express-duplicate-request");
 
 const express = require("express");
 const app = express();
 
-const mySlow = slowDown({
+const mySlow = duplicateRequest({
   expiration: 500, // One Request for Slow down 5 milliseconds each IP requests per `window`
 });
 
-// Apply the rate limiting middleware to all requests.
+// Apply the duplicate request middleware to all requests.
 app.use(mySlow);
 
 app.get("/", (req, res) => res.end("Hey!"));
@@ -61,12 +61,12 @@ app.listen(9000, () => console.log("Listening!"));
 ### Specific your Endpoint
 ```javascript
 // Declare Specific 1
-const specificSlow1 = slowDown({
+const specificSlow1 = duplicateRequest({
   expiration: 500, // Slow down 5 milliseconds
 });
 
 // Declare Specific 1
-const specificSlow2 = slowDown({
+const specificSlow2 = duplicateRequest({
   expiration: 1000, // Slow down 1 seconds
 });
 
